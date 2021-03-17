@@ -13,23 +13,77 @@
     <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
     <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
     <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <script src="index.js"></script>
 </head>
-<body>
+<body class="noselect" oncontextmenu="return false;" id="body">
     <div class="top-header">
         <h1>SABRE-Bot</h1>
         <h3>The better bot for your server</h3>
     </div>
     <div class="intro">
-        <img src=sabreweb/assets/avatar.png class="avatar">
-        <p class="intro-text">Hi 👋. This is SABRE-Bot.</p>
-        <p class="intro-text" style="font-size: 18px;">
+        <img src=https://sakshhamthecoder.github.io/sabreweb/assets/avatar.png class="avatar">
+        <p class="intro-text" style="font-size: 35px;">Hi 👋. This is SABRE-Bot.</p>
+        <p class="intro-text" style="font-size: 20px;">
             • A multipurpose bot for smooth working of your server<br>
             • Features like moderation, image commands, economy, and other utilities<br>
             • Custom welcome and leave messages on member joining or leaving the server<br>
             • Fun commands for changing your mood<br><br><br><br><br><br><br>
-        <button class="invite-btn" onclick="location.href='https://discord.com/api/oauth2/authorize?client_id=765628261413683261&permissions=8&scope=bot'" type="button">Invite to Server</button>
-</body></html>
+        <button class="invite-btn" onclick="location.href='https://discord.com/api/oauth2/authorize?client_id=765628261413683261&permissions=8&scope=bot'" type="button">Invite to Server</button><br>
+        <button class="invite-btn" onclick="location.href='commands.html'" type="button">Commands</button><br>
+        <button class="invite-btn" onclick="location.href='https://github.com/SakshhamTheCoder/SabreBOT'" type="button">Github</button>
+        <p class="intro-text" style="margin: 20px;">-> Image Gallery</p>
+        <ul class="nav nav-tabs nav-justified">
+            <li class="active"><a data-toggle="tab" href="#home"><span style="font-size: 20px;font-family:'Oswald', sans-serif;">Moderation</span></a></li>
+            <li><a data-toggle="tab" href="#fun"><span style="font-size: 20px;font-family:'Oswald', sans-serif;">Fun</span></a></li>
+            <li><a data-toggle="tab" href="#utility"><span style="font-size: 20px;font-family:'Oswald', sans-serif;">Utility</span></a></li>
+          </ul>
+        <br><br><br>
+          <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+              <h3>Moderation</h3>
+              <img src="/assets/dsc1.png" class="resp">
+              <img src="/assets/dsc2.png" class="resp">
+            </div>
+            <div id="fun" class="tab-pane fade">
+              <h3>Fun</h3>
+              <img src="/assets/dsc3.png" class="resp">
+              <img src="/assets/dsc5.png" class="resp">
+            </div>
+            <div id="utility" class="tab-pane fade">
+              <h3>Utility</h3>
+              <img src="/assets/dsc4.png" class="resp">
+            </div>
+          </div>
+        <p class="intro-text">And much more...</p>
+        <p id="oof"></p>
+        <br><br><br><br><br><br>
+    <div class="footer">
+      Bot is under development so there could be some bugs in it. Sorry for inconvenience.
+    <div>
+      <div class="alert" id="aert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        Dont click the right mouse button.
+      </div>
+</body>
+<script>
+  document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+}, false);
+  {document.getElementById('body').oncontextmenu = function() {
+//     var paragraph = document.getElementById("oof");
+
+// paragraph.textContent += "OOF YOU CANT RIGHT CLICK";
+    // document.getElementsByClassName('alert').style.display.
+    $('#aert').css('display','block');
+  setTimeout(function(){$('#aert').css('display','none')}, 5000)
+  }
+  
+}
+</script>
+</html>
