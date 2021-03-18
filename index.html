@@ -86,15 +86,9 @@
   
 }
 {
-  function checkURL(url) {
-    if (url.match(/authorised/))  // i.e. url.match(/\?deleted=1/)
-        return true;
-    return false;
-}
-
-if ( checkURL(document.location.href) ) {
-    location.href='auth.html';
-}
+  if(window.location.href.indexOf("authorised") != -1){
+    location.href="auth.html"
+  }
 }
 </script>
 </html>
