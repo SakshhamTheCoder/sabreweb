@@ -22,7 +22,7 @@
     <script src="index.js"></script>
 </head>
 <body class="noselect" oncontextmenu="return false;" id="body">
-    <div class="top-header">
+    <div class="top-header" onclick=tracker()>
         <h1>SABRE-Bot</h1>
         <h3>The better bot for your server</h3>
     </div>
@@ -34,7 +34,7 @@
             • Features like moderation, image commands, economy, and other utilities<br>
             • Custom welcome and leave messages on member joining or leaving the server<br>
             • Fun commands for changing your mood<br><br><br><br><br><br><br>
-        <button class="invite-btn" onclick="location.href='https://discord.com/api/oauth2/authorize?client_id=765628261413683261&permissions=8&scope=bot'" type="button">Invite to Server</button><br>
+        <button class="invite-btn" onclick="window.open='https://discord.com/api/oauth2/authorize?client_id=765628261413683261&permissions=8&scope=bot'" type="button">Invite to Server</button><br>
         <button class="invite-btn" onclick="location.href='commands.html'" type="button">Commands</button><br>
         <button class="invite-btn" onclick="window.open('https://github.com/SakshhamTheCoder/SabreBOT')" type="button">Github</button>
         <p class="intro-text" style="margin: 20px;">-> Image Gallery</p>
@@ -70,6 +70,10 @@
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
         Dont click the right mouse button.
       </div>
+      <div class="alert" id="yay" style="background-color: aquamarine;color: black;">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        Yay, you found an easter egg.
+      </div>
 </body>
 <script>
   {document.addEventListener("contextmenu", function(e){
@@ -87,8 +91,23 @@
 }
 {
   if(window.location.href.indexOf("authorized") != -1){
+    window.close();
     location.href="auth.html"
   }
+}
+{
+   var inc=0;
+ function tracker() {
+  inc+=1;
+  if (inc == 5){
+    $('#yay').css('display','block');
+  setTimeout(function(){$('#yay').css('display','none')}, 5000)
+    location.href='easter.html'
+  elseif (inc>=5)
+    return;
+  
+  }
+ }
 }
 </script>
 </html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SABRE-Bot</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+    <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+    <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
+</head>
+<body class="noselect" oncontextmenu="return false;" id="body">
+    <div class="top-header">
+        <h1>SABRE-Bot</h1>
+        <h3>The better bot for your server</h3>
+    </div>
+    <div class="intro">
+        <p class="intro-text" style="font-size: 35px;text-align: center;">You just found an easter egg!</p>
+        <p class="intro-text" style="font-size: 20px;">
+            • You know what, this bot has a support cum fun<br>
+            • <br>
+            • <br>
+            • <br><br><br><br>
+        <button class="invite-btn" onclick="location.href='commands.html'" type="button">Commands</button><br>
+        <button class="invite-btn" onclick="window.open('https://github.com/SakshhamTheCoder/SabreBOT')" type="button">Github</button>
+
+        <br><br><br>
+
+    <div class="footer">
+      Bot is under development so there could be some bugs in it. Sorry for inconvenience.
+    <div>
+      <div class="alert" id="aert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        Dont click the right mouse button.
+      </div>
+</body>
+<script>
+  {document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+}, false);}
+  {document.getElementById('body').oncontextmenu = function() {
+//     var paragraph = document.getElementById("oof");
+
+// paragraph.textContent += "OOF YOU CANT RIGHT CLICK";
+    // document.getElementsByClassName('alert').style.display.
+    $('#aert').css('display','block');
+  setTimeout(function(){$('#aert').css('display','none')}, 5000)
+  }
+  
+}
+</script>
+</html>

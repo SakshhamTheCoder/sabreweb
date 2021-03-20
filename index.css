@@ -145,3 +145,13 @@ a{
     animation: fadeIn 1s forwards;
     font-size: 18px;
 }
+#loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 32px;
+    height: 32px;
+    /* 1/2 of the height and width of the actual gif */
+    margin: -16px 0 0 -16px;
+    z-index: 100;
+    }
